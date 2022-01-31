@@ -1,6 +1,6 @@
 # Introduction to AWS console interface
 
-If you are new to AWS you are very much likely to dislike the AWS interface.
+If you are new to AWS you are very much likely to find it difficult to navigate through the AWS interface.
 
 In this blog we'll only be focusing on navigating in AWS interface, we'll also talk about some of the commonly used services.
 
@@ -58,3 +58,55 @@ If you had typed Elastic beanstalk, you will be presented with the below page:
 ![elastic_beanstalk](images\elastic_branstalk.jpg)
 
 Now what you can create a new application by clicking on Application on the left navigation bar. You can also quickly visit you environments from the left navigation panel. An application can have many environment. Each environment should have unique name. You will know about this as you start with deployment. 
+
+### EC2:
+
+This is very important page and you will often come back here so please note the items in the left navigation panel.
+  
+![EC2 Console](images\ec2_console.jpg):
+
+>Since not all the items are not visible I'll be writing it down important items that you will be using below
+
+**The items in the left navigation panels are as follows**
+
+```
+.
+├── EC2 Dashboard
+├── EC2 Global View
+├── Events
+├── ...
+├── Instances:
+│   ├── Instances (**important** Your current instances that you have created)
+│   ├── Instance Type (List of all the instance types like: t1.micro, t2nano, a1.xlarge)
+│   └── ...
+├── Images:
+│   └── ...
+├── Elastic Block Store:
+│   └── ...
+├── Network & Security:
+│   ├── Security Groups(**important** A security group acts as a virtual firewall for your EC2 instances to control inbound and outbound traffic)
+│   │
+│   └── Key Pairs (A Key pair, consists of a public key and a private key, is a set of security credentials that you use to prove your identity when connecting to an Amazon EC2 instance.)
+├
+├── Load Balancing:
+│   ├── Load Balancers(**important** Displays all your loadbalancers)
+│   └── Target Groups(A target group tells a load balancer where to direct traffic to : EC2 instances, fixed IP addresses; or AWS Lambda functions, amongst others.)
+├
+└── Auto Scaling
+    └── ...
+```
+
+
+### RDS Console:
+
+The most important item in the left panel is Databases highlighted in orange color
+
+![RDS console](images\RDS_dashboard.jpg)
+
+### S3: 
+
+The most important item in the left panel is the buckets itself.
+
+![S3 Bucket](images\s3.jpg)
+
+The others aren't that difficult so I'll leave it here.
