@@ -27,7 +27,7 @@ I'll be using eb-cli to deploy but will also show you how to use AWS console,
 
 The project I'll be deploying is called PhotoApp. It is basically simple web app that allows users to upload photos.
 
-Here is the link to that project you can refer this at later point of time: ![PhotoApp](https://github.com/PaulleDemon/DjangoPhotoApp)
+Here is the link to that project you can refer this at later point of time: [PhotoApp](https://github.com/PaulleDemon/DjangoPhotoApp)
 
 Before you deploy I am assuming your project directory structure looks like something shown below:
 
@@ -183,7 +183,7 @@ The 2nd option will directly create application without propmting you for more o
 
 If you went with the first option you will be propmted to select region you can leave this at default or choose a region.
 
-![region-selection](images\eb-init.jpg)
+![region-selection](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/eb-init.jpg)
 
 > Note: In future, You will have to keep all the services such as RDS, S3 under the same region for it to work properly.
 
@@ -292,11 +292,11 @@ Now click on the environment in my case it was called app-env.
 
 Now if it was successfully deployed you should see the health ok and a green check mark.
 
-![eb-successful](images\eb-successful.jpg)
+![eb-successful](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/eb-successful.jpg)
 
 Now What I have highlighted in red is your domain. Click on it and you will see.
 
-![disallowed host](images\disallowed_host.jpg).
+![disallowed host](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/disallowed_host.jpg).
 
 Now all you have to do is head back to your settings.py in your project and under
 ALLOWED HOST type in the domain.
@@ -330,7 +330,7 @@ Now you should be able to see your application output
 
 If you see health as degraded you should head over to logs in the left-navigation panel.
 
-![Logs](images\logs.jpg)
+![Logs](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/logs.jpg)
 
 Here click on request logs and click on last 100 lines.
 
@@ -339,7 +339,7 @@ Now download the logs:
 When you view that page:
 You should notice the title:
 Eg: 
-![log-title](images\log-title.jpg)
+![log-title](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/log-title.jpg)
 
 The above is logs for eb-engine.
 
@@ -383,7 +383,7 @@ If you see this error that means that django.config file was not uploaded succes
 
 You can confirm this by heading over to configuration tab from the left panel.
 
-![configuration](images\configuration.jpg).
+![configuration](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/configuration.jpg).
 
 Now under software click on edit:
 
