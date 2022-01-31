@@ -113,7 +113,7 @@ Now you will be presented with the below screen:
 
 ![Configuring environment](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/configuring-eb-env.jpg)
 
-under presets click on custom. Then under Load balancer section click on edit.
+7. under presets click on custom. Then under Load balancer section click on edit.
 
 If you are not using channels or websockets. You can go ahead with classic load balancer. 
 
@@ -130,6 +130,6 @@ Now go to the bottom of the page and click on save.
 
 > Note: Don't click on edit database under Database section, as we will be creating database from RDS console. If you are ever required to modify database settings you will find it difficult to modify. So don't create the data base when creating the environment.
 
-Now if you are happy with the settings you can click in create environment at the bottom of the page.
+8. Now if you are happy with the settings you can click in create environment at the bottom of the page.
 
 > This operation can take several minutes so please wait till the oprtation is complete.
