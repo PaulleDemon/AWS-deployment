@@ -1,6 +1,6 @@
 # Deploying Django to AWS using ElasticBeanstalk:
 
-There are many services provided by AWS and it can become challenging in the beginning to figure out which of them to use. So to make deploying web application easier they put together some of the common services that is used while deploying web app and brought it under Elastic beanstalk.
+There are many services provided by AWS and it can become challenging in the beginning to figure out which of them to use. So to make deploying web application easier AWS put together some of the common services that is used while deploying web app and brought it under Elastic beanstalk.
 
 When using Elastic beanstalk we first create an Application in Elastic beanstalk, upload our project in the form of an application bundle, the Elastic beanstalk then takes care of creating our environment and creates configurations required to run our code.
 
@@ -46,6 +46,8 @@ Replace the sampleproject with the name of your project.
 
 This setting, WSGIPath, specifies the location of the WSGI script that Elastic Beanstalk uses to start your application.
 
+Now if you haven't created a `requirements.txt` create it and use `pip freeze > requirements.txt` to copy the package names from your local virtual environment. Elastic beanstalk uses this file to determine which packages to install on EC2 instance running your application
+
 So now your directory should look like this:
 
 ```
@@ -66,7 +68,7 @@ So now your directory should look like this:
 ```
 > Note you can choose to add a file called `.ebignore` in which you can type in all the files and folders that you don't want to be uploaded when using command line interface to upload. If you have `.gitignore` you won't require `.ebignore`, but if you do add `.ebignore` your .gitignore won't be read and only the files and directories specifed in `.ebignore` will be ignored.
 
-### 1. Creating application using the aws console.
+## 1. Creating application using the aws console.
 This is one of the easiest way to set up your django project up and running.
 
 Go to AWS console and search for ElasticBeanstalk:
@@ -133,3 +135,5 @@ Now go to the bottom of the page and click on save.
 Now if you are happy with the settings you can click in create environment at the bottom of the page.
 
 > This operation can take several minutes so please wait till the oprtation is complete.
+
+## Using EB CLI (Recommended way):
