@@ -73,11 +73,11 @@ This is one of the easiest way to set up your django project up and running.
 
 Go to AWS console and search for ElasticBeanstalk:
 
-![Create Application](images\CreateEBApplication.jpg)
+![Create Application](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/CreateEBApplication.jpg)
 
 1. Click on "Create a new application" on the top right hand corner next to actions.
 
-![Type application name](images\createEbApp2.jpg)
+![Type application name](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/createEbApp2.jpg)
 2. Type in an application name and description(optional) and then click on create.
 
 I'll name it sample application and give a sample description.
@@ -86,16 +86,16 @@ Thats it your new application has been created.
 
 But its not done yet. You would need to create an environment to deploy and run our project. 
 
-![Create environment](images\create-environment.jpg)
+![Create environment](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/create-environment.jpg)
 
 3. Now click on "create a new environment". You will be presented with the below screen.
 
-![select env tire](images\select-env-tire.jpg)
+![select env tire](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/select-env-tire.jpg)
 
 4. Choose Web server environment and click on select.
 5. You will now be presented with the following screen.
 
-![Environment info](images\environment-info.jpg)
+![Environment info](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/environment-info.jpg)
 
 Here you can change the name of the environment or you can keep the default. You can create as many environments as you want but all their names must be unique.
 
@@ -105,17 +105,17 @@ Now under the platform section choose Python other dropdowns will be auto-filled
 
 You can now choose to upload your code by clicking on upload your code and choose the project from your local computer(max upload size: 512MB).
 
-Or you can even choose to leave that and later upload the code thorugh ebcli
+Or you can even choose to leave that and later upload the code thorugh ebcli.
 
-Now click on "configure more options". 
+6. Now click on "configure more options". 
 
 **Note: If you are deploying django application that uses channels for websockets you need to pay close attention to the below.**
 
 Now you will be presented with the below screen:
 
-![Configuring environment](images\configuring-eb-env.jpg)
+![Configuring environment](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/configuring-eb-env.jpg)
 
-under presets click on custom. Then under Load balancer section click on edit.
+7. under presets click on custom. Then under Load balancer section click on edit.
 
 If you are not using channels or websockets. You can go ahead with classic load balancer. 
 
@@ -132,8 +132,11 @@ Now go to the bottom of the page and click on save.
 
 > Note: Don't click on edit database under Database section, as we will be creating database from RDS console. If you are ever required to modify database settings you will find it difficult to modify. So don't create the data base when creating the environment.
 
-Now if you are happy with the settings you can click in create environment at the bottom of the page.
+8. Now if you are happy with the settings you can click in create environment at the bottom of the page.
 
 > This operation can take several minutes so please wait till the oprtation is complete.
+<<<<<<< HEAD
 
 ## Using EB CLI (Recommended way):
+=======
+>>>>>>> be5058702b7c3686cd988e20c8d1971176ec420e
