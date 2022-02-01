@@ -89,3 +89,110 @@ aws:elbv2:listener:443:
 ```
 
 If you are using HTTPS and have SSL certificate replace the SSL certificate arn with your SSL certificate ARN.
+
+
+## Connecting Redis:
+
+Its highly likely you want a in-memory database such as redis.
+
+### 1. Creating Redis through AWS console.
+
+1. Search for ElastiCache and in elasticcache dashboard click on create.
+![elastic cache](images\elasticache.jpg)
+
+2. Let cluster engine be redis. Now under redis settings give your cluster a name and select a node type(note: only `cache.t2.micro` and `cache.t3.micro` comes under free tire (if you have free tire account)) 
+![redis create](images\redis-create.png)
+
+If you are using under free tire make sure you have set the node type to `cache.t2.micro` or `cache.t3.micro`. set number of replicas to 0 disable multi A-Z, disable automatic backups.
+
+Now click on create.
+
+Once created copy the primary endpoint and in settings.py:
+
+```py
+...
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('<Primary endpoint>', 6379)],
+        },
+    },
+}
+...
+```
+
+You might have to go to redis security group and allow EC2 instance to access it.
+
+### 2. Connecting through config file(recommended)
+
+create a file called `elastic_cache.config` in `.ebextensions` folder and paste the below code:
+
+```
+Resources:
+  MyCacheSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: "Lock cache down to webserver access only"
+      SecurityGroupIngress :
+        - IpProtocol : "tcp"
+          FromPort :
+            Fn::GetOptionSetting:
+              OptionName : "CachePort"
+              DefaultValue: "6379"
+          ToPort :
+            Fn::GetOptionSetting:
+              OptionName : "CachePort"
+              DefaultValue: "6379"
+          SourceSecurityGroupName:
+            Ref: "AWSEBSecurityGroup"
+  MyElastiCache:
+    Type: "AWS::ElastiCache::CacheCluster"
+    Properties:
+      CacheNodeType:
+        Fn::GetOptionSetting:
+          OptionName : "CacheNodeType"
+          DefaultValue : "cache.t2.micro"
+      NumCacheNodes:
+        Fn::GetOptionSetting:
+          OptionName : "NumCacheNodes"
+          DefaultValue : "1"
+      Engine:
+        Fn::GetOptionSetting:
+          OptionName : "Engine"
+          DefaultValue : "redis"
+      VpcSecurityGroupIds:
+        -
+          Fn::GetAtt:
+            - MyCacheSecurityGroup
+            - GroupId
+
+Outputs:
+  ElastiCache:
+    Description : "ID of ElastiCache Cache Cluster with Redis Engine"
+    Value :
+      Ref : "MyElastiCache"
+```
+
+Now as shown above copy the primary endpoint and replace it under host.
+
+
+### Debugging tips:
+
+Daphne will run your websockets connection on port 5000. you can manually start this by going to your current directory activating your environment in your EC2 instance and running 
+```
+daphne -b 0.0.0.0 -p 5000 projectname.asgi:application
+```
+replace projectname with your project name.
+
+full steps:
+```sh
+eb ssh
+Enter your passphrase:
+
+---- Elastic Beanstalk----
+
+source /var/app/venv/*/bin/activate
+cd /var/app/current/
+daphne -b 0.0.0.0 -p 5000 projectname.asgi:application
+```

@@ -68,7 +68,7 @@ Now in pg-admin:
 If you get timeout errors even after having proper internet connection. Its likely you haven't given public access database. You can change this later in security group of the database.
 
 
-> Note: Public access to database is quite insecure. If someone has your endpoint, username and password. They will be able to connect to your database from any part of the world. We will later update the security group to allow access only to particular ip addresses.
+> Note: Public access to database is quite insecure. If someone has your endpoint, username and password. They will be able to connect to your database from any part of the world. We will later update the security group to allow access only to particular ip addresses in `security groups`.
 
 Now that your pgadmin is up and running lets now setup database in our project:
 

@@ -14,5 +14,9 @@ While I'll be using django, most of the steps followed will remain same accross 
 
 1. Introuduction to AWS interface
 2. Deploying our django application
-3. Deploying django channels application
-4. some debugging tips.
+3. Using RDS to create database
+4. Using Environment variables to hide our sensitive info's
+5. Using S3 storage to store static and media files.
+6. Redirecting Http to Https
+7. Deploying django channels application
+8. some debugging tips.
