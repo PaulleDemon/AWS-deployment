@@ -34,7 +34,7 @@ boto3 is a public API client to access the AWS resources such as AWS S3.
 
 3. Click on create bucket
 
-![Create-bucket](images\S3-buckets-create.jpg)
+![Create-bucket](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/S3-buckets-create.jpg)
 
 4. Now give the bucket a name of your choice and uncheck block all public access. (make sure the region you are in is the same as in the EC2 instance)
 
@@ -48,14 +48,14 @@ Now search for IAM in the searchbar:
 
 1.Click on Users from the left nav-bar and click on "Add users".
 
-![IAM](images\IAM-users.jpg)
+![IAM](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/IAM-users.jpg)
 
 2. Type in a user name and click on Access-key: programmatic access:
-![programmatic-access](images\programmatic-access.jpg)
+![programmatic-access](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/programmatic-access.jpg)
 
 3. Click on next and and under "Add user to group"
 click on create group and search for S3 full access, check the check-box.
-![Create-group](images\create-group.jpg)
+![Create-group](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/create-group.jpg)
 
 4. Click on review and if everything seems correct then you can click on create user.
 
