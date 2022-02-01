@@ -48,15 +48,15 @@ Now your structure should look below.
 
 4. If you want to use HTTPS and have ssl certificate then click on add listner and fill in the port number to be 443 choose your ssl certificate and choose any SSL policy from the dropdown.
 
-![HTTPS](images\create-https-loadbalancer.png)
+![HTTPS](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/create-https-loadbalancer.png)
 
 5. Then go ahead and add processes and match the below settings.(make sure you enable stickness in port 5000)
-![process](images\loadbalancer-config.jpg)
+![process](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/loadbalancer-config.jpg)
 
 You health check might fail with 100% of get request failing with 4xx. Thats why I filled a gave a different health check path that returns 200 Ok status.
 
 6. Now under Rules match the below (if you aren't using HTTPS then change the listener port to 80) the process is the name you gave :
-![rules](images\rules.jpg)
+![rules](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/rules.jpg)
 
 >Note: If you are using HTTPS protocol then you should use wss protocol eg: wss://ws/xys otherwise use ws://ws/pqr
 
@@ -98,10 +98,10 @@ Its highly likely you want a in-memory database such as redis.
 ### 1. Creating Redis through AWS console.
 
 1. Search for ElastiCache and in elasticcache dashboard click on create.
-![elastic cache](images\elasticache.jpg)
+![elastic cache](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/elasticache.jpg)
 
 2. Let cluster engine be redis. Now under redis settings give your cluster a name and select a node type(note: only `cache.t2.micro` and `cache.t3.micro` comes under free tire (if you have free tire account)) 
-![redis create](images\redis-create.png)
+![redis create](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/redis-create.png)
 
 If you are using under free tire make sure you have set the node type to `cache.t2.micro` or `cache.t3.micro`. set number of replicas to 0 disable multi A-Z, disable automatic backups.
 
