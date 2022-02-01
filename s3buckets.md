@@ -2,7 +2,7 @@
 
 If your users are going to be uploading images such as profile etc, you can also serve static files from S3 but in this we will focus on how to serve media files. You should definitely use S3 to store them and serve them directly from S3 instead of django serving those files.
 
-To set up S3 follow the below instructions:
+### To set up S3 follow the below instructions:
 
 1. Install the following pacakges and put them in `requirements.txt` file:
 ```
@@ -82,7 +82,6 @@ Now in the same directory as `settings.py` create a file called as `storages.py`
 
 ```py
 from storages.backends.s3boto3 import S3Boto3Storage
-
 
 class MediaStore(S3Boto3Storage):
     location = 'media'

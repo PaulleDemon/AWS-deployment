@@ -9,6 +9,7 @@ You can check your loadbalancer type under LoadBalancer from configurations in t
 
 If you are using classic loadbalancer you will have to create a new environment with a application loadbalancer as there is no way you can upgrade from classic loadbalancer to application loadbalancer as of Feb-2-2022.
 
+## setup
 
 1. First add the following to your `requiremet.txt`:
 ```

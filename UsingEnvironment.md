@@ -151,16 +151,15 @@ Example usage in `settings.py`:
 
 ```python
 DATABASES = {
->            'default': {
->                'ENGINE': 'django.db.backends.postgresql',
->                'NAME': 'postgres',
->                'USER': ENV_VARS['USER'],
->                'PASSWORD': ENV_VARS['RDS_PASSWORD],
->                'HOST': ENV_VARS['RDS_HOST'],
->                'PORT': ENV_VARS['RDS_PORT']
->            }
->        }
-
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'NAME': 'postgres',
+                'USER': ENV_VARS['USER'],
+                'PASSWORD': ENV_VARS['RDS_PASSWORD],
+                'HOST': ENV_VARS['RDS_HOST'],
+                'PORT': ENV_VARS['RDS_PORT']
+            }
+        }
 ```
 
 > Note: The above is needed only if the environment variable is not set as expected. Otherwise use `os.getenv()`
