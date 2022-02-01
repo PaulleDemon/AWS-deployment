@@ -134,12 +134,13 @@ Now you will be presented with the below screen:
 7. under presets click on custom. Then under Load balancer section click on edit.
 
 If you are not using channels or websockets. You can go ahead with classic load balancer. 
+<hr>
 
 **Webscockets**:
 If you are using websockets click on Application load balancer. Only Application load balancer allows websocket connections. 
 
 Now go to the bottom of the page and click on save.
-
+ <hr>
 
 > Note: you will not be able to change the load balancer later. So if you are using websockets use Application load balancer. 
 
@@ -147,6 +148,8 @@ Now go to the bottom of the page and click on save.
 
 
 > Note: Don't click on edit database under Database section, as we will be creating database from RDS console. If you are ever required to modify database settings you will find it difficult to modify. So don't create the data base when creating the environment.
+
+> Note: for productions, I suggest you add your database to `.gitignore` and not upload it EB environment.
 
 8. Now if you are happy with the settings you can click in create environment at the bottom of the page.
 
@@ -307,6 +310,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['app-env.eba-zprspr6p.us-west-2.elasticbeanstalk.com']
 ```
+> Note: In production don't forget to set `DEBUG=FALSE`
 
 Now save it again head back to your EB CLI and type 
 ```sh
