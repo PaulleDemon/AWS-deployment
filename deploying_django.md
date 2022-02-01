@@ -335,7 +335,7 @@ Now you should be able to see your application output
 
 <br>
 
-![eb-unsuccessful](images\degraded-health.jpg)
+![eb-unsuccessful](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/degraded-health.jpg)
 
 If you see this that means that there was an error while uploading or the health check is failing with 4xx error. Follow the debugging errors below to debug the errors
 ### Debugging errors:
@@ -431,7 +431,7 @@ There are three types of Type:
 
 These types will be visible under Type column under Recent events section as shown below.
 
-![recent-events](images\recent-events.jpg)
+![recent-events](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/recent-events.jpg)
 
 If you don't see any error click on show all.
 
@@ -463,7 +463,7 @@ Now under load balancer click on edit.
 
 Scroll down to health check:
 
-![health-check](images\health-check.jpg)
+![health-check](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/health-check.jpg)
 Now under health check path provide the path to your health check eg:`/health` as shown above.
 
 then scroll down and click on apply and this could take several minutes. You can head over to events and check if the health check is failing
