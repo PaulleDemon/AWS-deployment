@@ -25,8 +25,6 @@ While I'll be using django, most of the steps followed will remain same accross 
         4. RDS 
         5. S3
 
-<br>
-
 2. [Deploying our django application](https://github.com/PaulleDemon/AWS-deployment/blob/master/deploying_django.md)
     
     1. Deployment flow
@@ -39,7 +37,6 @@ While I'll be using django, most of the steps followed will remain same accross 
         2. Creating an environment
     6. Debugging errors
 
-<br>
 
 3. [Using RDS to create database](https://github.com/PaulleDemon/AWS-deployment/blob/master/connecting_RDS.md)
 
@@ -50,7 +47,6 @@ While I'll be using django, most of the steps followed will remain same accross 
     5. Testing connection on EC2 instance (DEBUGGING)
     6. Migrations
 
-<br>
 
 4. [Using Environment variables to hide our sensitive info's](https://github.com/PaulleDemon/AWS-deployment/blob/master/UsingEnvironment.md)
 
@@ -58,14 +54,12 @@ While I'll be using django, most of the steps followed will remain same accross 
     2. Hiding your sensitive information in development
     3. Setting environment variables in production:
 
-<br>
 
 5. [Using S3 storage to store static and media files.](https://github.com/PaulleDemon/AWS-deployment/blob/master/s3buckets.md)
     1. Introduction.
     2. setting up project for S3 and creating bucket.
     3. Creating IAM Role
 
-<br>
 
 6. [Redirecting Http to Https](https://github.com/PaulleDemon/AWS-deployment/blob/master/redirectHttps.md)
 
@@ -74,7 +68,6 @@ While I'll be using django, most of the steps followed will remain same accross 
     1. setup
     2. Connecting Redis:
 
-<br>
 
 8. [some debugging tips](https://github.com/PaulleDemon/AWS-deployment/blob/master/debugging-tips.md)
     1. Introuction
