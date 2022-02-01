@@ -91,7 +91,7 @@ GO to ElasticBeanstalk on AWS console -> Configurations -> Software -> Edit
 
 Now scroll down until you see "Environment properties":
 
-![Environment properties](images\environment-properties.jpg)
+![Environment properties](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/environment-properties.jpg)
 
 Now you can start filling the name and value as I have shown above. (Please use your own host name, password etc)
 
