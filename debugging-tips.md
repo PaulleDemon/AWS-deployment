@@ -11,7 +11,7 @@ There is high chance that you man not be able to get your application running th
 ### debugging tips:
 
 1. Check the logs in the elastic beanstalk.
-![Logs](images\logs.jpg). 
+![Logs](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/logs.jpg). 
 You would usually need to download only the last 100 lines. In logs, Most likely your errors would lie under the `/var/log/web.stdout.log`.
 
 If you get `ModuleNotFoundError: No module named 'application'` then its likely your wsgi path was not set correctly during deployment. Try to stage changes using `git add .` and redeploy the staged changes `eb deploy --staged`
