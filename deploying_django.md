@@ -13,7 +13,7 @@ We will be using the same to deploy our web application.
 
 1. Create an Application in Elastic beanstalk.
 2. Create an environment under that above created application.
-3. Upload the application.
+3. Upload your application.
 
 ## There are multiple ways to deploy an application (some are stated below): 
 1. Using the AWS console.
