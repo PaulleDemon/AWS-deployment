@@ -13,24 +13,24 @@ Now go to AWS console and search for RDS
 If you are currently in RDS dashboard(see the left nav panel)
 
 Before creating Database make sure you are in the same region as the region you selected when creting your application using `eb init` or its in the same region as the environment region.
-![region](images\region.jpg)
+![region](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/region.jpg)
 
 In my case its Us-west-2(oregon). If its not in the same region click on the drop-down select the correct region.
 
 you can scroll down to Create database and click on create database.
 
-![dashboard-create](images\rds-dashboard-create.jpg)
+![dashboard-create](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/rds-dashboard-create.jpg)
 
 If you are currently in databases you can simply click on create database if you see that.
 
-![Create database](images\create-database.jpg)
+![Create database](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/create-database.jpg)
 
 1. Choose Standard create under database creation method.
 2. Choose your Engine type, I'll be going with postgresSQL 12.8.
 3. Choose Template. I'll be choosing free tire. You can choose production or dev/test if you don't have free tire(free database usage for 1st year).
 
 Scroll down to settings.
-![settings](images\db-settings.jpg)
+![settings](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/db-settings.jpg)
 
 Fill in database identifier. You can choose a name of your choice. 
 
@@ -46,7 +46,7 @@ Once created the status will be changed to available(view this in databases pane
 
 Now click on you database and copy the endpoint
 
-![Endpoint](images\database-endpoint.jpg)
+![Endpoint](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/database-endpoint.jpg)
 
 Don't share this endpoint.
 
