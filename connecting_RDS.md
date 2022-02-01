@@ -171,3 +171,35 @@ In python you can check the host name by using the below code in your shell
 >>> settings.DATABASES['default']['PORT']  
 >>> '5432'  
 ```
+
+
+## Migrations:
+
+If had set public access you should be simply able to run :
+```
+python manage.py migrate
+```
+directly from your development environment.(make sure if you have set the right database in `settings.py`) 
+
+You can also log in to EC2 instance using ssh and perform migration(not recommended).
+
+If the database is not accessible from your development environment follow the recommened way for migration as stated below.
+
+### Recommened migration steps:
+
+In your `.ebextensions` folder create a file called `db-migrate.config`(the name could be what ever you want).
+
+Then paste the following command
+```
+container_commands:
+  01_migrate:
+    command: "source /var/app/venv/*/bin/activate && python3 manage.py migrate"
+    leader_only: true
+option_settings:
+  aws:elasticbeanstalk:application:environment:
+    DJANGO_SETTINGS_MODULE: PhotoProject.settings
+```
+
+In the above replace the `PhotoProject` with your application name where the settings.py resides.
+
+This will run `python manage.py migrate` every time you deploy on EC2 instance.
