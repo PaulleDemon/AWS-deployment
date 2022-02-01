@@ -326,6 +326,14 @@ git add .
 
 Now you should be able to see your application output
 
+
+### Unsuccessful deployment:
+
+<br>
+
+![eb-unsuccessful](images\degraded-health.jpg)
+
+If you see this that means that there was an error while uploading or the health check is failing with 4xx error. Follow the debugging errors below to debug the errors
 ### Debugging errors:
 
 If you see health as degraded you should head over to logs in the left-navigation panel.
@@ -404,3 +412,54 @@ you can head elastic beanstalk configurations -> software -> edit -> WSGI path f
 
 ### ModuleNotFoundError: No module named 'XYZ':
 If you find module not found then make sure you have included them in `requirements.txt`
+
+### Failing health checks:
+If you don't see any errors in the log file then head over to the link in that was underlined in red in the above image(the image where the health was green).
+
+Click on the link if you can see your app running or the django's debug error page then it means that your upload was successful 
+
+You should head over to the environment page and check out the recent events. 
+
+There are three types of Type:
+1. INFO - it's just info and there are no errors
+2. WARN - A warning.
+3. ERROR - an error occured
+
+These types will be visible under Type column under Recent events section as shown below.
+
+![recent-events](images\recent-events.jpg)
+
+If you don't see any error click on show all.
+
+If under detail you see x% (eg: 50%) of health checks are failing with 4xx. This means that only the health checks are failing.
+
+By default the health checks performed to `/` endpoint. So when AWS makes get requests to `http://myhost/` your application should return 200 Ok  or anthing in 200 range.
+
+If your application is not returning 200 then you can created a dedicated health check endpoint. 
+
+Eg:
+urls.py 
+```
+urlpatterns = [
+    path('health/', views.health_check),
+    ...
+]
+```
+
+views.py:
+```
+from django.http import HttpResponse
+def health_check(request):
+    return HttpResponse(status=200)
+```
+
+Now head over to the environment configuration in ealsticbeanstalk -> left panel -> Configuration -> scroll down -> Load balancer.
+
+Now under load balancer click on edit.
+
+Scroll down to health check:
+
+![health-check](images\health-check.jpg)
+Now under health check path provide the path to your health check eg:`/health` as shown above.
+
+then scroll down and click on apply and this could take several minutes. You can head over to events and check if the health check is failing
