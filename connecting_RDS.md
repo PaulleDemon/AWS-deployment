@@ -74,6 +74,8 @@ Now that your pgadmin is up and running lets now setup database in our project:
 
 ## Setting up RDS in our project:
 
+First add `psycopg2-binary==2.9.2` to `requirements.txt`.
+
 Open your settings.py and under databases change the below accordingly.
 
 ```python
@@ -117,4 +119,55 @@ Thats it now you can save the `settings.py` and in your EB CLI `eb deploy` (make
 
 ## Testing connection on EC2 instance (DEBUGGING):
 
-If you ever want to check if your project is being able to connect to database 
+If you ever want to check if your project is being able to connect to database.
+
+using eb cli connect to your EC2 instance using
+
+```
+eb ssh
+```
+It will then ask for passphrase. Give the passphrase you set up during ssh creation. If you didn't set up ssh you can create it using `eb ssh --setup`.
+
+now navigate to your project directory in the Ec2 using:
+```
+cd /var/app/current/
+```
+
+activate your virtual environment using
+```
+source /var/app/venv/*/bin/activate
+```
+
+> Note: these paths might change in the future if aws team decides to change it.
+
+Now to check if it is connected just use: 
+```
+python manage.py check --database default
+```
+
+If you its successful you should get 
+```
+System check identified no issues (0 silenced).
+```
+
+### Errors
+
+If you get 
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.OperationalError: could not connect to server: No such file or directory
+    Is the server running locally and accepting
+    connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+``` 
+It means that the database was not added correctly or you haven't added host name. Try rechecking the host name.
+
+In python you can check the host name by using the below code in your shell
+
+```python
+>>> from django.conf import settings
+>>> settings.DATABASES['default']['HOST']
+>>> 'awed.aws.com'
+>>> settings.DATABASES['default']['PORT']  
+>>> '5432'  
+```
