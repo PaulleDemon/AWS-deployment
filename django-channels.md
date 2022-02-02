@@ -54,7 +54,7 @@ Now your structure should look below.
 5. Then go ahead and add processes and match the below settings.(make sure you enable stickness in port 5000)
 ![process](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/loadbalancer-config.jpg)
 
-You health check might fail with 100% of get request failing with 4xx. Thats why I filled a gave a different health check path that returns 200 Ok status.
+You health check might fail with "100% of get request failing with 4xx". Thats why I gave a different health check path that returns 200 Ok status.
 
 6. Now under Rules match the below (if you aren't using HTTPS then change the listener port to 80) the process is the name you gave :
 ![rules](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/rules.jpg)
