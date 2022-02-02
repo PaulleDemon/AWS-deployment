@@ -267,7 +267,7 @@ The key's randomart image is:
 Enter passphrase:
 WARNING: Uploaded SSH public key for "***" into EC2 for region *****.
 ```
-You can choose \<keypairname\> of your choice.
+You can choose `\<keypairname\>` of your choice.
 Enter a passphrase you can remember. you can also choose to save the passphrase, everything including fingerprint in a file(shouldn't be uploaded to an public repo).
 
 ### 2. Creating an environment:
@@ -278,7 +278,7 @@ To set this up type
 ```
 eb create app-env
 ```
-You can replace <app-env> with a name of your choice. This simply creates an environment with the specified name and uploads the project zip file to S3 buckets service (its a simple storage service provided by AWS). You can also host your media files here and media files will directly be served from here. 
+You can replace "app-env" with a name of your choice. This simply creates an environment with the specified name and uploads the project zip file to S3 buckets service (its a simple storage service provided by AWS). You can also host your media files here and media files will directly be served from here. 
 
 This might take few seconds to few minutes to complete. After completion you should see something as shown below at the end.
 
