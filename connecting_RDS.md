@@ -13,24 +13,24 @@ Now go to AWS console and search for RDS
 If you are currently in RDS dashboard(see the left nav panel)
 
 Before creating Database make sure you are in the same region as the region you selected when creting your application using `eb init` or its in the same region as the environment region.
-![region](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/region.jpg)
+![region](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/RDS/region.jpg)
 
 In my case its Us-west-2(oregon). If its not in the same region click on the drop-down select the correct region.
 
 you can scroll down to Create database and click on create database.
 
-![dashboard-create](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/rds-dashboard-create.jpg)
+![dashboard-create](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/RDS/rds-dashboard-create.jpg)
 
 If you are currently in databases you can simply click on create database if you see that.
 
-![Create database](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/create-database.jpg)
+![Create database](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/RDS/create-database.jpg)
 
 1. Choose Standard create under database creation method.
 2. Choose your Engine type, I'll be going with postgresSQL 12.8.
 3. Choose Template. I'll be choosing free tire. You can choose production or dev/test if you don't have free tire(free database usage for 1st year).
 
 Scroll down to settings.
-![settings](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/db-settings.jpg)
+![settings](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/RDS/db-settings.jpg)
 
 Fill in database identifier. You can choose a name of your choice. 
 
@@ -38,7 +38,7 @@ Choose a password and username you can remember. I'll be leaving the username as
 
 4. Now scroll down and under connectivity section -> Public access -> click on Yes.
 
-You won't ideally need to keep public access to yes. But if you want to access your database from your computer or from PgAdmin on your computer, you will have to keep this yes. You can change this later. 
+You won't ideally need to keep public access to yes. But if you want to access your database from your computer or from PgAdmin on your computer, you will have to keep this yes. You can change this later using [security groups](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md). 
 
 Don't change anything else. You can scroll down and click on create-database. Your database creation can take few minutes to cretae.
 
@@ -46,7 +46,7 @@ Once created the status will be changed to available(view this in databases pane
 
 Now click on you database and copy the endpoint
 
-![Endpoint](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/database-endpoint.jpg)
+![Endpoint](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/RDS/database-endpoint.jpg)
 
 Don't share this endpoint.
 
@@ -68,7 +68,7 @@ Now in pg-admin:
 If you get timeout errors even after having proper internet connection. Its likely you haven't given public access database. You can change this later in security group of the database.
 
 
-> Note: Public access to database is quite insecure. If someone has your endpoint, username and password. They will be able to connect to your database from any part of the world. We will later update the security group to allow access only to particular ip addresses in `security groups`.
+> Note: Public access to database is quite insecure. If someone has your endpoint, username and password. They will be able to connect to your database from any part of the world. We will later update the security group to allow access only to particular ip addresses in [`security groups`](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md).
 
 Now that your pgadmin is up and running lets now setup database in our project:
 
