@@ -10,11 +10,11 @@ By default there is a security group called as Default security group. You can a
 Go to EC2 console -> Scroll down to Security groups in the side navigation panel -> security group
 
 Your security groups will appear here. You can create new security group, modify inbound/outbound rules for existing security groups from here.
-![security group](images\security-groups\security_group.jpg)
+![security group](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/security-groups/security_group.jpg)
 
 1. Click on create security group.
 
-![Create security group](images\security-groups\security-group-create.png)
+![Create security group](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/security-groups/security-group-create.png)
 
 Give it a security group name, give an optional description. You can choose a default VPC.
 
