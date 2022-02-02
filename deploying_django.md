@@ -267,8 +267,8 @@ The key's randomart image is:
 Enter passphrase:
 WARNING: Uploaded SSH public key for "***" into EC2 for region *****.
 ```
-You can choose <keypairname> of your choice.
-Enter a passphrase you can remember. you can also choose to same the pass phrase, everything fingerprint in a file(shouldn't be uploaded to an public repo).
+You can choose \<keypairname\> of your choice.
+Enter a passphrase you can remember. you can also choose to save the passphrase, everything including fingerprint in a file(shouldn't be uploaded to an public repo).
 
 ### 2. Creating an environment:
 
