@@ -79,8 +79,8 @@ While I'll be using django, most of the steps followed will remain same accross 
 
 ### Extra:
 
-1. Security Groups
-2. IAM 
+1. [Security Groups](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md)
+2. [IAM](https://github.com/PaulleDemon/AWS-deployment/blob/master/IAM.md) 
 
 References:
 1. https://docs.aws.amazon.com/
