@@ -104,7 +104,7 @@ Its highly likely you want a in-memory database such as redis.
 2. Let cluster engine be redis. Now under redis settings give your cluster a name and select a node type(note: only `cache.t2.micro` and `cache.t3.micro` comes under free tire (if you have free tire account)) 
 ![redis create](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/redis-create.png)
 
-If you are using under free tire make sure you have set the node type to `cache.t2.micro` or `cache.t3.micro`. set number of replicas to 0 disable multi A-Z, disable automatic backups.
+> If you are elgible for free tire make sure you have set the node type to `cache.t2.micro` or `cache.t3.micro`. Set number of replicas to 0 disable multi A-Z, disable automatic backups.
 
 Now click on create.
 
