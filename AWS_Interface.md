@@ -8,7 +8,7 @@ Once you create an account on AWS you will mostly be working on their console.
 
 You should be able find their console just by typing AWS console in browser.
 
-![AWS console](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/aws_console.jpg)
+![AWS console](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/aws_console.jpg)
 
 <sub>This is how the console looks as of Jan-31-2022</sub>
 
@@ -49,13 +49,13 @@ from AWS:  https://aws.amazon.com/route53/
 
 Search is easy you can just type in the service you want and services click a service you intend to use.
 
-![search](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/search.jpg)
+![search](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/search.jpg)
 
 ### Elastic beanstalk:
 
 If you had typed Elastic beanstalk, you will be presented with the below page:
 
-![elastic_beanstalk](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/elastic_branstalk.jpg)
+![elastic_beanstalk](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/elastic_branstalk.jpg)
 
 Now what you can create a new application by clicking on Application on the left navigation bar. You can also quickly visit you environments from the left navigation panel. An application can have many environment. Each environment should have unique name. You will know about this as you start with deployment. 
 
@@ -63,7 +63,7 @@ Now what you can create a new application by clicking on Application on the left
 
 This is very important page and you will often come back here so please note the items in the left navigation panel.
   
-![EC2 Console](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ec2_console.jpg):
+![EC2 Console](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/ec2_console.jpg):
 
 >Since not all the items are not visible I'll be writing it down important items that you will be using below
 
@@ -101,12 +101,12 @@ This is very important page and you will often come back here so please note the
 
 The most important item in the left panel is Databases highlighted in orange color
 
-![RDS console](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/RDS_dashboard.jpg)
+![RDS console](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/RDS_dashboard.jpg)
 
 ### S3: 
 
 The most important item in the left panel is the buckets itself.
 
-![S3 Bucket](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/s3.jpg)
+![S3 Bucket](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/s3.jpg)
 
 The others aren't that difficult so I'll leave it here.
