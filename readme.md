@@ -1,14 +1,14 @@
-# Deploying web application to AWS
+# Deploying web application to AWS: Django, Django Channels
 
-Deploying your project to AWS can be very difficult and frustrating if you are new to deploying a project. Neither is AWS user-interface good to work with nor is their documentation.
+Deploying your project to AWS can be difficult and frustrating, if you are new to deploying a project. Neither is AWS user-interface easy to work with nor is their documentation easy to understand.
 
 I recently had to deploy django application which also makes use of websockets and it took me around 8 days to get it properly up and running. Most of the errors occurred because I didn't understand their system well.
 
-In this blog I wish not only help you deploy your django project but also help you debug some of the common errors that I faced.
+In this blog I wish not only help you deploy your django project but also to help you understand AWS better. I will also talk some of the commonly errors that I faced during the deployment.
 
 While I'll be using django, most of the steps followed will remain same accross different frameworks and programming languages.
 
-> If think some steps are missing or is incorrect please create a new issue on this github repository or create a new pull request.
+>Note: If think some steps are missing or is incorrect please create a new issue on this github repository or create a new pull request.
 
 ### Table of contents:
 
@@ -76,3 +76,14 @@ While I'll be using django, most of the steps followed will remain same accross 
     4. Commonly used commands.
         1. Eb cli commands
         2. Linux commands
+
+### Extra:
+
+1. Security Groups
+2. IAM 
+
+References:
+1. https://docs.aws.amazon.com/
+2. StackOverflow answers
+3. https://blog.zishanahmad.dev/how-to-deploy-django-channels-2x-on-aws-elastic-beanstalk-amazon-linux-2#comments-list
+4. https://medium.com/@elspanishgeek/how-to-deploy-django-channels-2-x-on-aws-elastic-beanstalk-8621771d4ff0
