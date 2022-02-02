@@ -365,7 +365,7 @@ Now scroll down till you find
 Under this you should be able to see what the error is.
 
 
-You can connect to linux aws servers using: 
+If you want to connect to linux aws servers use. You can also debug from there:
 
 ```
 eb ssh
@@ -388,7 +388,10 @@ You can also use
 ```
 ls /var/app/current/
 ```
-To list all the files and folders under current directory.
+to list all the files and folders under current directory.
+
+
+Errors:
 ### ModuleNotFoundError: No module named 'application':
 
 If you see this error that means that django.config file was not uploaded successfully
