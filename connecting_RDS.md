@@ -2,7 +2,7 @@
 
 If you are going to be working in production you definitely want ditch SQLite database that you have been working with and use a database such as Postgre SQL or MySQL.
 
-RDS provides you with simple and easy setup to connect to an external database. This database won't be inside our ptoject directory but outside our application. We will connect to the database using the endpoint that is provided by the AWS.
+RDS provides you with simple and easy setup to connect to an external database. This database won't be inside our project directory but outside our application. We will connect to the database using the endpoint that is provided by the AWS.
 
 We will be using the AWS console to set up our RDS.
  
