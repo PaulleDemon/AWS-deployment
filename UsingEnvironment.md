@@ -1,12 +1,12 @@
 # Setting you allowed host and other sensitive information in environment variables.
 
-If you are working in production or even in development you don't want to expose your host name, allowed hosts, passwords etc, by placing them inside your settings.
+If you are working in production or even in development you don't want to expose your hostname, allowed hosts, passwords, etc, by placing them inside your settings.
 
 ## Hiding your sensitive information in development
 
-In development you will create a `.env` file where you will store all the important passowrds, endpoints to database etc. You will add this file to `.gitignore` and will not commit this file or put this up in a public repository.
+In development you will create a `.env` file where you will store all the important passwords, endpoints to the database, etc. You will add this file to `.gitignore` and will not commit this file or put this up in a public repository.
 
-The `.env` file should look something like the below
+The `.env` file should look something like the one below
 ```
 RDS_HOST=xyz.region-xyq.aws.database.com
 RDS_PASSWORD=xyzwie129
@@ -35,14 +35,14 @@ eg:
 >    └── ...
 >```
 
-Now to use go to settings.py copy all the sensitive information such as RDS Host, password, username etc, and add it to `.env` file in the above shown format.
+Now to use go to settings.py copy all the sensitive information such as RDS Host, password, username, etc, and add it to `.env` file in the above-shown format.
 
 Now use pip install and install `django-dotenv` and add it to `requirements.txt`
 ```
 pip install django-dotenv
 ```
 
-Now open manage.py file and add the following line under main `dotenv.read_dotenv()` dont forget to import dotenv
+Now open manage.py file and add the following line under main `dotenv.read_dotenv()` don't forget to import dotenv
 
 ```python
 import os
@@ -58,7 +58,7 @@ def main():
     ...
 ```
 
-now go to settings and replace all the sensitive information with `os.getenv(KEY)` or `os.environ.get(KEY)`. `os.environ` return a dictonary of key-value pairs `os.getenv` is simply a wrapper around `os.environ.get(KEY)`  Here key is the name you assigned on the Left hand side of the = in `.env` file
+now go to settings and replace all the sensitive information with `os.getenv(KEY)` or `os.environ.get(KEY)`. `os.environ` return a dictionary of key-value pairs `os.getenv` is simply a wrapper around `os.environ.get(KEY)`  Here the key is the name you assigned on the Left-hand side of the = in `.env` file
 
 .env
 ```
@@ -68,16 +68,16 @@ So here RDS_HOST is your key.
 
 ## Setting environment variables in production:
 
-When you are uploading to production you are less likely to upload your `.env` file, you will instead set your RDS_HOST, RDS_PASSWORD and other sensitive information as environment variable. 
+When you are uploading to production you are less likely to upload your `.env` file, you will instead set your RDS_HOST, RDS_PASSWORD, and other sensitive information as an environment variable. 
 
-There are multiple ways to set the envinronment variable. I'll be showing you two ways.
+There are multiple ways to set the environment variable. I'll be showing you two ways.
 
 ### 1. First Way
 
-The first way is to set environment variable directly in the EC2 instance. 
-You can do so by logging into to your EC2 instance using `eb ssh`
+The first way is to set the environment variable directly in the EC2 instance. 
+You can do so by logging into your EC2 instance using `eb ssh`
 
-Then you can set the environment variables using the linux commands.
+Then you can set the environment variables using the Linux commands.
 Eg:
 ```sh
 export Key1=value1 Key2=value2 KeyN=valueN
@@ -93,20 +93,20 @@ Now scroll down until you see "Environment properties":
 
 ![Environment properties](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/environment-properties.jpg)
 
-Now you can start filling the name and value as I have shown above. (Please use your own host name, password etc)
+Now you can start filling in the name and value as I have shown above. (Please use your own hostname, password, etc)
 
 Once you have set all the information you can click on Apply.
 
-It will take some time to apply. If everything went right your status should be ok. If something went wrong during the process of updating. It will reset back to previous configuration. You can check the events under Recent events.
+It will take some time to apply. If everything went right your status should be ok. If something went wrong during the process of updating. It will reset back to the previous configuration. You can check the events under Recent events.
 
 
-You can also set this using EB CLI using the below commmand.
+You can also set this using EB CLI using the below command.
 ```
  eb setenv Key1=value1 Key2=value2 KeyN=valueN
 ```
 ### Note:
 
-If you are using the second method its likely that your environment variables are not set as you expect.
+If you are using the second method it's likely that your environment variables are not set as you expect.
 
 So add the below code in your `settings.py`:
 
