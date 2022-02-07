@@ -1,6 +1,6 @@
 # Redirecting traffic from Http to Https:
 
-If you don't have a SSL certificate for your domin you can request one from the certificate manager in the AWS console. There are lot of tutorials so I won't be doing it
+If you don't have an SSL certificate for your domain you can request one from the certificate manager in the AWS console. There are a lot of tutorials so I won't be doing it
 
 Chances are that you don't want your users to connect through HTTP you instead want them to be connected using HTTPS:
 
@@ -25,4 +25,4 @@ From the "Default action" drop-down select "Redirect" to ->  select HTTPS protoc
 
 ![https-redirect](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/HttpsRedirect/redirect_to_Https.jpg)
 
-Thats it save the changes and now all http protocols will be redirected to https.
+That's it save the changes and now all http protocols will be redirected to https.
