@@ -1,13 +1,13 @@
 # Django-channels:
 
-If you are a beginner please make sure you have visited the uploading django. There are important concepts you need to know before proceeding.
+If you are a beginner please make sure you have visited the uploading Django. There are important concepts you need to know before proceeding.
 
-Make sure you are using Application load balancer and not clasic loadbalancer.
-Classic Load balancers don't support websockets.
+Make sure you are using an Application load balancer and not a classic loadbalancer.
+Classic Load balancers don't support WebSockets.
 
 You can check your loadbalancer type under LoadBalancer from configurations in the environment.
 
-If you are using classic loadbalancer you will have to create a new environment with a application loadbalancer as there is no way you can upgrade from classic loadbalancer to application loadbalancer as of Feb-2-2022.
+If you are using classic loadbalancer you will have to create a new environment with an application loadbalancer as there is no way you can upgrade from classic loadbalancer to application loadbalancer as of Feb-2-2022.
 
 ## setup
 
@@ -45,16 +45,16 @@ Now your structure should look below.
 ``` 
 
 
-3. If you have appication loadbalancer. Go to environment -> loadbalancer -> edit:
+3. If you have an appication loadbalancer. Go to environment -> loadbalancer -> edit:
 
-4. If you want to use HTTPS and have ssl certificate then click on add listner and fill in the port number to be 443 choose your ssl certificate and choose any SSL policy from the dropdown.
+4. If you want to use HTTPS and have an SSL certificate then click on add listener and fill in the port number to be 443 choose your SSL certificate and choose any SSL policy from the dropdown.
 
 ![HTTPS](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/create-https-loadbalancer.png)
 
-5. Then go ahead and add processes and match the below settings.(make sure you enable stickness in port 5000)
+5. Then go ahead and add processes and match the below settings. (make sure you enable stickiness in port 5000)
 ![process](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/loadbalancer-config.jpg)
 
-You health check might fail with "100% of get request failing with 4xx". Thats why I gave a different health check path that returns 200 Ok status.
+Your health check might fail with "100% of GET request failing with 4xx". That's why I gave a different health check path that returns 200 Ok status.
 
 6. Now under Rules match the below (if you aren't using HTTPS then change the listener port to 80) the process is the name you gave :
 ![rules](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/rules.jpg)
@@ -89,22 +89,22 @@ aws:elbv2:listener:443:
     Rules: ws
 ```
 
-If you are using HTTPS and have SSL certificate replace the SSL certificate arn with your SSL certificate ARN.
+If you are using HTTPS and have an SSL certificate replace the SSL certificate arn with your SSL certificate ARN.
 
 
 ## Connecting Redis:
 
-Its highly likely you want a in-memory database such as redis.
+It's highly likely you want an in-memory database such as Redis.
 
 ### 1. Creating Redis through AWS console.
 
 1. Search for ElastiCache and in elasticcache dashboard click on create.
 ![elastic cache](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/elasticache.jpg)
 
-2. Let cluster engine be redis. Now under redis settings give your cluster a name and select a node type(note: only `cache.t2.micro` and `cache.t3.micro` comes under free tire (if you have free tire account)) 
+2. Let cluster engine be Redis. Now under Redis settings give your cluster a name and select a node type(note: only `cache.t2.micro` and `cache.t3.micro` comes under free tire (if you have a free tire account)) 
 ![redis create](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/redis-create.png)
 
-> If you are elgible for free tire make sure you have set the node type to `cache.t2.micro` or `cache.t3.micro`. Set number of replicas to 0 disable multi A-Z, disable automatic backups.
+> If you are eligible for free tire make sure you have set the node type to `cache.t2.micro` or `cache.t3.micro`. Set number of replicas to 0 disable multi A-Z, disable automatic backups.
 
 Now click on create.
 
@@ -123,7 +123,7 @@ CHANNEL_LAYERS = {
 ...
 ```
 
-You might have to go to redis security group and allow EC2 instance to access it.
+You might have to go to the Redis security group and allow the EC2 instance to access it.
 
 ### 2. Connecting through config file(recommended)
 
@@ -170,7 +170,7 @@ Resources:
 
 Outputs:
   ElastiCache:
-    Description : "ID of ElastiCache Cache Cluster with Redis Engine"
+    Description: "ID of ElastiCache Cache Cluster with Redis Engine"
     Value :
       Ref : "MyElastiCache"
 ```
@@ -180,7 +180,7 @@ Now as shown above copy the primary endpoint and replace it under host.
 
 ### Debugging tips:
 
-Daphne will run your websockets connection on port 5000. you can manually start this by going to your current directory activating your environment in your EC2 instance and running 
+Daphne will run your WebSockets connection on port 5000. you can manually start this by going to your current directory activating your environment in your EC2 instance and running 
 ```
 daphne -b 0.0.0.0 -p 5000 projectname.asgi:application
 ```
