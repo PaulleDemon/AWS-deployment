@@ -80,6 +80,7 @@ So now your directory should look like this:
     │   ├── wsgi.py
     │   └── asgi.py
     ├── app3
+    ├── requirements.txt
     └── .gitignore
 ```
 > Note you can choose to add a file called `.ebignore` in which you can type in all the files and folders that you don't want to be uploaded when using the command-line interface to upload. If you have `.gitignore` you won't require `.ebignore`, but if you do add `.ebignore` your `.gitignore` won't be read and only the files and directories specified in `.ebignore` will be ignored.
