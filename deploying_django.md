@@ -85,7 +85,7 @@ So now your directory should look like this:
 > Note you can choose to add a file called `.ebignore` in which you can type in all the files and folders that you don't want to be uploaded when using the command-line interface to upload. If you have `.gitignore` you won't require `.ebignore`, but if you do add `.ebignore` your `.gitignore` won't be read and only the files and directories specified in `.ebignore` will be ignored.
 
 ## 1. Creating an application using the AWS console.
-This is one of the easiest ways to set up your Django project and run it.
+This is one of the easiest way to set your Django project up and running.
 
 Go to AWS console and search for ElasticBeanstalk:
 
@@ -372,7 +372,7 @@ eb ssh
 ```
 You should enter your passphrase and be able to login. You can now type Linux commands 
 
-To activate your environment in Linux
+To activate your environment in Linux-2
 ```
 source /var/app/venv/*/bin/activate
 ```
