@@ -52,7 +52,7 @@ You ideally don't want your django-app to be able to access all the services by 
 
 Now search for IAM in the search bar:
 
-1. Click on Users from the left nav bar and click on "Add users".
+1. Click on Users from the left navbar and click on "Add users".
 
 ![IAM](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/S3/IAM-users.jpg)
 
