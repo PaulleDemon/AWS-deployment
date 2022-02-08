@@ -1,6 +1,6 @@
 # Debugging tips:
 
-There is high chance that you man not be able to get your application running the first time you deploy it. So here are some of the debugging tips you can use to understand the cause of your error.
+There is a high chance that you may not be able to get your application running the first time you deploy it. So here are some of the debugging tips you can use to understand the cause of your error.
 
 ### Check list
 
@@ -14,9 +14,9 @@ There is high chance that you man not be able to get your application running th
 ![Logs](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/logs.jpg). 
 You would usually need to download only the last 100 lines. In logs, Most likely your errors would lie under the `/var/log/web.stdout.log`.
 
-If you get `ModuleNotFoundError: No module named 'application'` then its likely your wsgi path was not set correctly during deployment. Try to stage changes using `git add .` and redeploy the staged changes `eb deploy --staged`
+If you get `ModuleNotFoundError: No module named 'application'` then it's likely your wsgi path was not set correctly during deployment. Try to stage changes using `git add .` and redeploy the staged changes `eb deploy --staged`
 
-If you get `ModuleNotFoundError: No module named 'xyz'` make sure you have added the module xyz in the `requirments.txt`(here xyz is a placeholder, this isn't and actual library).
+If you get `ModuleNotFoundError: No module named 'xyz'` make sure you have added the module xyz in the `requirments.txt`(here xyz is a placeholder, this isn't an actual library).
 
 Check if your database is connected by connecting to Ec2 instance using `eb shh`
 ```sh
@@ -28,7 +28,7 @@ source /var/app/venv/*/bin/activate
 cd /var/app/current/
 python manage.py check --database default
 ```
-This should  result in `System check identified no issues (0 silenced).` if there is no connection problem.
+This should result in `System check identified no issues (0 silenced).` if there is no connection problem.
 
 
 ## Some commonly used commands:
@@ -38,7 +38,7 @@ This should  result in `System check identified no issues (0 silenced).` if ther
 Things in square brackets are optional.
 | Command                               | description                                                                                      | usage                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------|
-| eb init [-p platform applicationname] | sets default values for Eastic Beanstalk application prompting you with series of questions      | eb init, eb init -p python-3.8 ApplicationName |
+| eb init [-p platform applicationname] | sets default values for Elastic Beanstalk application prompting you with a series of questions      | eb init, eb init -p python-3.8 ApplicationName |
 | eb create [environmnet name]          | creates an environment                                                                           | eb create, eb create sample-env                |
 | eb ssh --setup                        | change or create key pair(ssh) assigned to an instance                                           | eb ssh --setup                                 |
 | eb ssh [environment name]             | Connects to Amazon Linux EC2 instance in your environment using SSH                              | eb ssh, eb ssh sample-env                      |
@@ -46,7 +46,7 @@ Things in square brackets are optional.
 | eb deploy --staged                    | deploy staged changes                                                                            | eb deploy --staged                             |
 
 
-### Some linux commands:
+### Some Linux commands:
 
 | Command                                                 | description                                                                         | usage                                      |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------|

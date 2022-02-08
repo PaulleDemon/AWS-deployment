@@ -1,14 +1,14 @@
-# Deploying web application to AWS: Django, Django Channels
+# Deploying a web application to AWS: Django, Django Channels
 
-Deploying your project to AWS can be difficult and frustrating, if you are new to deploying a project. Neither is AWS user-interface easy to work with nor is their documentation easy to understand.
+Deploying your project to AWS can be difficult and frustrating if you are new to deploying a project. Neither is AWS user interface easy to work with nor is their documentation easy to understand.
 
-I recently had to deploy django application which also makes use of websockets and it took me around 8 days to get it properly up and running. Most of the errors occurred because I didn't understand their system well.
+I recently had to deploy a Django application that also makes use of WebSockets and it took me around 8 days to get it properly up and running. Most of the errors occurred because I didn't understand their system well.
 
-In this blog I wish not only help you deploy your django project but also to help you understand AWS better. I will also talk some of the commonly errors that I faced during the deployment.
+In this blog, I wish not only to help you deploy your Django project but also to help you understand AWS better. I will also talk about some of the common errors that I faced during the deployment.
 
-While I'll be using django, most of the steps followed will remain same accross different frameworks and programming languages.
+While I'll be using Django, most of the steps followed will remain the same across different frameworks and programming languages.
 
->Note: If think some steps are missing or is incorrect please create a new issue on this github repository or create a new pull request.
+>Note: If think some steps are missing or is incorrect please create a new issue on this Github repository or create a new pull request.
 
 ### Table of contents:
 
@@ -25,13 +25,13 @@ While I'll be using django, most of the steps followed will remain same accross 
         4. RDS 
         5. S3
 
-2. [Deploying our django application](https://github.com/PaulleDemon/AWS-deployment/blob/master/deploying_django.md)
+2. [Deploying our Django application](https://github.com/PaulleDemon/AWS-deployment/blob/master/deploying_django.md)
     
     1. Deployment flow
     2. Multiple ways to deploy an application
     3. Setup
-    4. Creating application using the aws console.
-    5. Using EB CLI to deploy application
+    4. Creating an application using the AWS console.
+    5. Using EB CLI to deploy an application
         <br>
         1. Creating an application
         2. Creating an environment
@@ -44,7 +44,7 @@ While I'll be using django, most of the steps followed will remain same accross 
     2. setting up RDS
     3. Connecting to pgAdmin
     4. Setting up RDS in our project
-    5. Testing connection on EC2 instance (DEBUGGING)
+    5. Testing connection on an EC2 instance (DEBUGGING)
     6. Migrations
 
 
@@ -57,22 +57,22 @@ While I'll be using django, most of the steps followed will remain same accross 
 
 5. [Using S3 storage to store static and media files.](https://github.com/PaulleDemon/AWS-deployment/blob/master/s3buckets.md)
     1. Introduction.
-    2. setting up project for S3 and creating bucket.
+    2. Setting up a project for S3 and creating a bucket.
     3. Creating IAM Role
 
 
 6. [Redirecting Http to Https](https://github.com/PaulleDemon/AWS-deployment/blob/master/redirectHttps.md)
 
-7. [Deploying django channels application](https://github.com/PaulleDemon/AWS-deployment/blob/master/django-channels.md)
+7. [Deploying Django channels application](https://github.com/PaulleDemon/AWS-deployment/blob/master/django-channels.md)
 
-    1. setup
+    1. Setup
     2. Connecting Redis:
 
 
 8. [some debugging tips](https://github.com/PaulleDemon/AWS-deployment/blob/master/debugging-tips.md)
-    1. Introuction
-    2. check list
-    3. debugging tips
+    1. Introduction
+    2. Checklist
+    3. Debugging tips
     4. Commonly used commands.
         1. Eb cli commands
         2. Linux commands
