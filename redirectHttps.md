@@ -1,6 +1,6 @@
 # Redirecting traffic from Http to Https:
 
-If you don't have an SSL certificate for your domain you can request one from the certificate manager in the AWS console. There are a lot of tutorials so I won't be doing it
+If you don't have an SSL certificate for your domain, you can request one from the certificate manager in the AWS console. There are a lot of tutorials so I won't be doing it
 
 Chances are that you don't want your users to connect through HTTP you instead want them to be connected using HTTPS:
 
