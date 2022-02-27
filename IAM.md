@@ -2,7 +2,7 @@
 
 Identity and access management helps in ensuring that the right users have appropriate access to the AWS resources.
 
-If you are an employer with root access to AWS and want to allow your employees to have access to the AWS resources, you shouldn't give away your root account mail id and password, instead, you should use your account to create a User Group and Users from IAM. You can then have control over what your employee can have access to from here.
+If you are an employer with root access to AWS and want to allow your employees to have access to the AWS resources, you shouldn't give away your root account mail id and password, instead, you should use your account to create a User Group and Users from IAM console. You can then have control on what aws resources your employee can have access to from here.
 
 ### User:
 

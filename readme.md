@@ -2,7 +2,7 @@
 
 Deploying your project to AWS can be difficult and frustrating if you are new to deploying a project. Neither is AWS user interface easy to work with nor is their documentation easy to understand.
 
-I recently had to deploy a Django application that also makes use of WebSockets and it took me around 8 days to get it properly up and running. Most of the errors occurred because I didn't understand their system well.
+I recently had to redeploy a Django application that made use of WebSockets and it took me around 8 days to get it properly up and running. Most of the errors occurred because I didn't understand their system well.
 
 In this blog, I wish not only to help you deploy your Django project but also to help you understand AWS better. I will also talk about some of the common errors that I faced during the deployment.
 
@@ -77,7 +77,7 @@ While I'll be using Django, most of the steps followed will remain the same acro
         1. Eb cli commands
         2. Linux commands
 
-### Extra:
+### Additional information:
 
 1. [Security Groups](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md)
 2. [IAM](https://github.com/PaulleDemon/AWS-deployment/blob/master/IAM.md) 

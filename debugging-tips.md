@@ -18,7 +18,7 @@ If you get `ModuleNotFoundError: No module named 'application'` then it's likely
 
 If you get `ModuleNotFoundError: No module named 'xyz'` make sure you have added the module xyz in the `requirments.txt`(here xyz is a placeholder, this isn't an actual library).
 
-Check if your database is connected by connecting to Ec2 instance using `eb shh`
+Check if your database is connected by connecting to Ec2 instance using `eb shh`.
 ```sh
 eb ssh
 Enter passphrase:

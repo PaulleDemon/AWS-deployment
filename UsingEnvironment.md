@@ -145,7 +145,7 @@ if not DEBUG:
 ```
 Source for the above code: https://stackoverflow.com/a/64528198/15993687
 
-> Note: `get_enviton_vars()` returns dictinoary of key value pairs so you can use any dictinoary methods such as `.get()` on it
+> Note: `get_enviton_vars()` returns dictinoary of key value pairs so you can use any dictinoary methods such as `.get()` on it.
 
 Example usage in `settings.py`:
 
@@ -162,4 +162,4 @@ DATABASES = {
         }
 ```
 
-> Note: The above is needed only if the environment variable is not set as expected. Otherwise use `os.getenv()`
+> Note: The above is needed only if the environment variable is not set as expected. Otherwise use `os.getenv()`.

@@ -102,4 +102,4 @@ DEFAULT_FILE_STORAGE = '<project_name>.storage.MediaStore'
 replace `<project_name>` with your project name.
 The above will work if the storages.py is in the same directory as `settings.py` If you have it somewhere else provide the path to that eg: `app.storages.MediaStore`.
 
-That's it should now be up and running.
+That's it, it should now be up and running.

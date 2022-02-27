@@ -203,3 +203,41 @@ option_settings:
 In the above replace the `PhotoProject` with your application name where the settings.py resides.
 
 This will run `python manage.py migrate` every time you deploy on EC2 instance.
+
+
+### Additional information for django users.
+
+loaddata and dumpdata can be useful when you need to quickly load and unload data from your database from a specifed format such as JSON, XML etc. 
+
+**dump data**
+If you ever need to serialize the data from the database to JSON or any other format you can use the following commands provided by django
+
+`python -Xutf8 manage.py dumpdata > mydata.json --indent 4`
+
+The above command will serialize all the data from the database to JSON format with 4 indent, the Xutf8 specifies the encoding.
+
+You can also be more specific on which apps you would like to serialize by specifying the appe name eg:
+
+`python -Xutf8 manage.py dumpdata app1 > mydata.json --indent 4`
+
+The above will serialize models only from the app1.
+
+> Note: If you get the error `CommandError: Unable to serialize database: cursor "_django_curs_xxxxxx_66" does not exist` it usually means that the table in the database and model doesn't match.
+> Django uses your models to serialize data, so if you had made any changes to your model revert back and the dumpdata again.
+
+**Load data**
+
+You can use the below command to provide an initial data to the database.
+
+`python manage.py loaddata mydata.json`
+
+The loaddata will deserialize the data and insert it to your database.
+
+>Note: If you already have some data in your data base, then make sure to comment out post_save methods, if you are using that to create additional fields. Otherwise it might sometimes create duplicate elements and your loaddata will fail.
+
+
+Additional reference:
+
+`dumpdata`: https://docs.djangoproject.com/en/4.0/ref/django-admin/#dumpdata
+
+`loaddata`: https://docs.djangoproject.com/en/4.0/ref/django-admin/#loaddata

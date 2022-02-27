@@ -26,3 +26,10 @@ From the "Default action" drop-down select "Redirect" to ->  select HTTPS protoc
 ![https-redirect](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/HttpsRedirect/redirect_to_Https.jpg)
 
 That's it save the changes and now all http protocols will be redirected to https.
+
+
+### Additional information
+
+Additionally for django users, you can also set `SECURE_SSL_REDIRECT=True` in settings.py to redirect http to https connections.
+
+reference: https://docs.djangoproject.com/en/2.2/topics/security/#ssl-https

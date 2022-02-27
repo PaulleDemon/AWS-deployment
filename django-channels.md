@@ -18,6 +18,10 @@ daphne==3.0.1
 supervisor==4.2.2
 ```
 
+> Daphne is a HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP, developed to power Django Channels. we'll be using this to run our ASGI application
+
+> The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP server. 
+
 2. create a file named `Procfile` and add the following:
 ```
 web: gunicorn --bind :8000 --workers 3 --threads 2 <project>.wsgi:application

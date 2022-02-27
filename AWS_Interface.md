@@ -12,7 +12,7 @@ You should be able to find their console just by typing AWS console in the brows
 
 <sub>This is how the console looks as of Jan-31-2022</sub>
 
-Here you will be able to see the recently visited items. You should be able to find their services just by typing the name of the service in the search-bar located in the header.
+Here you will be able to see the recently visited items. You should be able to find their services just by typing the name of the service in the search bar located in the header.
 
 ## Commonly used services: 
 
@@ -53,7 +53,7 @@ Search is easy you can just type in the service you want and services click a se
 
 ### Elastic beanstalk:
 
-If you had typed Elastic beanstalk, you will be presented with the below page:
+If you had typed Elastic beanstalk in the search bar, you would be presented with the below page:
 
 ![elastic_beanstalk](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/AWSinterface/elastic_branstalk.jpg)
 
@@ -67,7 +67,7 @@ This is a very important page and you will often come back here so please note t
 
 >Since not all the items are not visible I'll be writing it down important items that you will be using below
 
-**The items in the left navigation panels are as follows**
+**The important items in the left navigation panels are as follows**
 
 ```
 .

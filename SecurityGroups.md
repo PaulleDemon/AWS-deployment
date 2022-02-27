@@ -2,12 +2,12 @@
 
 A security group acts as a virtual firewall for your EC2 instances to control the incoming traffic and outgoing traffic. You can control the incoming traffic by setting inbound rules and the outgoing traffic by setting the Outbound rules.
 
-By default, there is a security group called as Default security group. You can also create your custom security group
+By default, there is a security group called as Default security group. You can also create your custom security group.
 
 
 ## creating custom security group:
 
-Go to EC2 console -> Scroll down to Security groups in the side navigation panel -> security group
+Go to EC2 console -> Scroll down to Security groups in the side navigation panel -> security group.
 
 Your security groups will appear here. You can create a new security group, modify inbound/outbound rules for existing security groups from here.
 ![security group](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/security-groups/security_group.jpg)
