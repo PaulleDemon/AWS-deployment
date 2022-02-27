@@ -14,7 +14,7 @@ To add a new user:
 IAM console -> User (left nav panel) -> Add user
 
 1. Create a username check on the access type you want. If you are using from application to access resources you might want to go with "Access key - Programmatic access". Programmatic access provides you with an access key and secret key. If you simply want your employee to have access to resources you might want to go with "Password - AWS Management Console access". You can also choose to check on both the checkboxes(programmatic access and AWS management console access). Now click next.
-2. You can choose to add users to a group(discussed below). If you don't have any group you can create group or skip this and add it later. Click next
+2. You can choose to add users to a group(discussed below). If you don't have any group you can create group or skip this and add it later, click next.
 3. You can choose to add key-value such as user's email for example. The key would be **Email** and value would be **person@mail.com**. You can also choose to skip this. Click on next.
 4. Now review your choice and click on create.
 
