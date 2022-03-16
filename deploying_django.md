@@ -150,7 +150,7 @@ Now go to the bottom of the page and click on save.
 
 > Note: Don't click on edit database under Database section, as we will be creating a database from the RDS console. If you are ever required to modify database settings you will find it difficult to modify. So don't create the database when creating the environment.
 
-> Note: for productions, I suggest you add your database to `.gitignore` and not upload it EB environment.
+> Note: for productions, I suggest you add your local (sqlite3/any other) database to `.gitignore` and not upload it EB environment.
 
 8. Now if you are happy with the settings you can click in create environment at the bottom of the page.
 
