@@ -69,7 +69,7 @@ While I'll be using Django, most of the steps followed will remain the same acro
     2. Connecting Redis:
 
 
-8. [Using Route53 to connect to custom domain]
+8. [Using Route53 to connect to custom domain](https://github.com/PaulleDemon/AWS-deployment/blob/master/Route53.md)
 
     1. Connecting your custom domain to elasticbeanstalk using Route53.
     2. Configuring your custom domain email to send mails 
