@@ -69,7 +69,14 @@ While I'll be using Django, most of the steps followed will remain the same acro
     2. Connecting Redis:
 
 
-8. [some debugging tips](https://github.com/PaulleDemon/AWS-deployment/blob/master/debugging-tips.md)
+8. [Using Route53 to connect to custom domain]
+
+    1. Connecting your custom domain to elasticbeanstalk using Route53.
+    2. Configuring your custom domain email to send mails 
+    3. Hosting a static website
+
+
+9. [some debugging tips](https://github.com/PaulleDemon/AWS-deployment/blob/master/debugging-tips.md)
     1. Introduction
     2. Checklist
     3. Debugging tips
