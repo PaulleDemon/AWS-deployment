@@ -33,7 +33,7 @@ from AWS:  https://aws.amazon.com/route53/
 
 7. **IAM(Identity and access management)**: If you are working as a team or you have employee's you want to give access to AWS services. You will use the root account(your account) that has access to all the AWS services to setup an account for an employee using IAM so that you have control over what they have access to in the AWS services.
 
-8. **ElstiCache** This is used to start an in-memory database such as Redis. Useful when you have a websocket and need an in-memory database(databases in RAM).
+8. **ElastiCache** This is used to start an in-memory database such as Redis. Useful when you have a websocket and need an in-memory database(databases in RAM).
 
 9. **Billing**: This is self-explanatory
 
