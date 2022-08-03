@@ -83,6 +83,34 @@ So now your directory should look like this:
     ├── requirements.txt
     └── .gitignore
 ```
+**Setting up static files for production:**
+As soon as you set `DEBUG=False`, django will no longer serve your static files(css, js files). So before you send it to AWS there are a couple of things you need to configure in settings.py.
+
+1. set `STATIC_ROOT = BASE_DIR.joinpath('static')`
+2. set `STATIC_URL = '/static/'`
+3. set `STATICFILES_DIRS = []`, in the list mention all the paths to your static files that are outside static folder in your apps; as by default django looks into static folder inside your django app you don't need to mention it in this list. 
+
+Whats happening? Well all that the above steps does is that django will collect and place all the static files into a folder mentioned in `STATIC_ROOT = BASE_DIR.joinpath('static')`, so that it doesn't have to keep searhing every folder for your static files in your project during production.
+
+Now with that done you still need to add one more thing to `django.config` file
+```
+aws:elasticbeanstalk:environment:proxy:staticfiles:
+    /static: static
+    value: static/
+```
+
+So now your `django.config` file should look as such.
+```
+option_settings:
+  aws:elasticbeanstalk:environment:proxy:staticfiles:
+    /static: static
+    value: static/
+    
+  aws:elasticbeanstalk:container:python:
+    WSGIPath: sampleproject.wsgi:application
+```
+
+
 > Note you can choose to add a file called `.ebignore` in which you can type in all the files and folders that you don't want to be uploaded when using the command-line interface to upload. If you have `.gitignore` you won't require `.ebignore`, but if you do add `.ebignore` your `.gitignore` won't be read and only the files and directories specified in `.ebignore` will be ignored.
 
 ## 1. Creating an application using the AWS console.
