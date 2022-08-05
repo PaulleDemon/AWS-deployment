@@ -126,10 +126,7 @@ CHANNEL_LAYERS = {
 }
 ...
 ```
-
-You might have to go to the Redis security group and allow the EC2 instance to access it.
-
-You will Also have to create a [security group](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md) and associate it with the ec2 instance.
+You will also have to create a [security group](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md) and associate it with the ec2 instance.
 
 1. Go to Ec2 > security groups > click on create security group.
 
