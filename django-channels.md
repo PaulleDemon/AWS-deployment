@@ -60,7 +60,7 @@ Now your structure should look below.
 
 Your health check might fail with "100% of GET request failing with 4xx". That's why I gave a different health check path that returns 200 Ok status.
 
-6. Now under Rules match the below (if you aren't using HTTPS then change the listener port to 80) the process is the name you gave :
+6. Now under Rules match the below (if you aren't using HTTPS then change the listener port to 80) the process is the name you gave, this will make sure to redirect all the path that has `/ws/` is redirected to the websocket process :
 ![rules](https://github.com/PaulleDemon/AWS-deployment/blob/master/images/ElastiCache/rules.jpg)
 
 >Note: If you are using HTTPS protocol then you should use wss protocol eg: wss://ws/xys otherwise use ws://ws/pqr
@@ -129,6 +129,18 @@ CHANNEL_LAYERS = {
 
 You might have to go to the Redis security group and allow the EC2 instance to access it.
 
+You will Also have to create a [security group](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md) and associate it with the ec2 instance.
+
+1. Go to Ec2 > security groups > click on create security group.
+
+2. Now give it a name say, <project_name>_redis, add a small description.(optional)
+
+3. Now under inbound rules, click on add inbound rule.
+
+4. set type to `custom TCP`, port to 6379 (redis port), set source to custom and search for your environment security group and set it to that.
+
+5. Go to the bottom of this page to see how to test redis connection.
+
 ### 2. Connecting through config file(recommended)
 
 create a file called `elastic_cache.config` in `.ebextensions` folder and paste the below code:
@@ -183,6 +195,26 @@ Now as shown above copy the primary endpoint and replace it under host.
 
 
 ### Debugging tips:
+
+To test the connection first ssh into your instance.
+
+then type 
+```
+source /var/app/venv/*/bin/activate
+cd /var/app/current/
+```
+now type `python manage.py shell` and give the following command
+
+```
+>>> import channels.layers
+>>> from asgiref.sync import async_to_sync
+>>> channel_layer = channels.layers.get_channel_layer()
+>>> async_to_sync(channel_layer.send)('test_channel', {'foo': 'bar'})
+>>> async_to_sync(channel_layer.receive)('test_channel')
+>>> {'foo': 'bar'} # <---------- you should receive this as output if everything went well
+```
+
+If you receive connection timeout, its most likely related to your security group.
 
 Daphne will run your WebSockets connection on port 5000. you can manually start this by going to your current directory activating your environment in your EC2 instance and running 
 ```
