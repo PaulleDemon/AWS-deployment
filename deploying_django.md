@@ -185,7 +185,16 @@ Now go to the bottom of the page and click on save.
 
 ## 2. Using EB CLI to deploy the application.
 
+
 To use this you must have EB CLI installed as stated above and added the path to environment variables. Please follow the steps as provided in the guide to install EB CLI.
+
+### generating access key and configuring AWS CLI:
+
+first go to IAM console by searching for it in the search bar. Now click on users, click on your account name > under summary click on "security credentials" tab > click on create access key.
+
+Now follow the steps in this documentation to configure your account with cli: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+
+----
 
 Now open the command prompt or terminal and change the current directory to the project directory.
 
