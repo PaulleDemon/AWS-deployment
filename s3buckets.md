@@ -102,4 +102,54 @@ DEFAULT_FILE_STORAGE = '<project_name>.storage.MediaStore'
 replace `<project_name>` with your project name.
 The above will work if the storages.py is in the same directory as `settings.py` If you have it somewhere else provide the path to that eg: `app.storages.MediaStore`.
 
+
+### Creating bucket policy
+
+Once you are done with the setup, go back to s3 in aws console. Click on your bucket -> permissions tab. Now set "block all public access" to off. Now edit the bucket policy and set the below code to allow only read access
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::media-name",
+                "arn:aws:s3:::media-name/*"
+            ]
+        }
+    ]
+}
+```
+
+replace `arn:aws:s3:::media-name` with the arn you get when you click on edit bucket policy. 
+
+### Cross-origin resource sharing (CORS)
+
+Sometimes the browser might report cors error so scoll down in the permission tab to the CORS policy and add the following:
+```json
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET",
+            "HEAD"
+        ],
+        "AllowedOrigins": [
+            "http://mydomain.com",
+            "https://mydomain.com"
+        ],
+        "ExposeHeaders": [
+            "Access-Control-Allow-Origin"
+        ]
+    }
+]
+```
+
 That's it, it should now be up and running.
