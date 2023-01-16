@@ -49,7 +49,7 @@ Now your structure should look below.
 ``` 
 
 
-3. GO to elasticbeanstalk and in sidebar click on configurations If you have an appication loadbalancer. Go to environment -> loadbalancer -> edit:
+3. Goto elasticbeanstalk and in sidebar click on configuration. If you have an appication loadbalancer. Go to environment -> loadbalancer -> edit:
 
 4. If you want to use HTTPS and have an SSL certificate then click on add listener and fill in the port number to be 443 choose your SSL certificate and choose any SSL policy from the dropdown.
 
