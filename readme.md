@@ -96,6 +96,9 @@ Join our discord server
 
 [<img src="https://github.com/PaulleDemon/PaulleDemon/raw/main/images/discord-logo.png" height="160px" width="350px">](https://discord.gg/kbaJFz8n)
 
+**Want me to deploy your project?**
+DM me on the Discord server, and I will help you at reasonable rates.
+
 References:
 1. https://docs.aws.amazon.com/
 2. StackOverflow answers
