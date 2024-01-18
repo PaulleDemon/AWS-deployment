@@ -89,15 +89,18 @@ While I'll be using Django, most of the steps followed will remain the same acro
 1. [Security Groups](https://github.com/PaulleDemon/AWS-deployment/blob/master/SecurityGroups.md)
 2. [IAM](https://github.com/PaulleDemon/AWS-deployment/blob/master/IAM.md) 
 
+<hr>
 
-**Want help in deployment** 
+### **Finding it hard to deploy your project or got stuck? Want me to deploy your project?**
+I am taking commissions so check out: https://www.buymeacoffee.com/artpaul/commissions
+
+
+**Want community help in deployment** 
 
 Join our discord server
 
 [<img src="https://github.com/PaulleDemon/PaulleDemon/raw/main/images/discord-logo.png" height="160px" width="350px">](https://discord.gg/kbaJFz8n)
 
-** Finding it hard to deploy your project or got stuck? Want me to deploy your project?**
-I am taking commissions so check out: https://www.buymeacoffee.com/artpaul/commissions
 
 References:
 1. https://docs.aws.amazon.com/
