@@ -92,7 +92,7 @@ While I'll be using Django, most of the steps followed will remain the same acro
 <hr>
 
 ### **Finding it hard to deploy your project or got stuck? Want me to deploy your project?**
-I am taking commissions so check out: https://www.buymeacoffee.com/artpaul/commissions
+Check out my [services](https://www.buymeacoffee.com/artpaul/commissions)
 
 
 **Want community help in deployment** 
@@ -122,3 +122,12 @@ Try my production scale software products on [Gumroad](https://foxcraft.gumroad.
 
 [<img src="https://github.com/PaulleDemon/PaulleDemon/blob/main/images/gumroad.png" height="150px" width="150px">](https://foxcraft.gumroad.com/)
 
+<hr>
+
+**Keywords**
+1. How to deploy Django to AWS?
+2. How to deploy Django Channels to AWS?
+3. How to deploy Django to cloud?
+4. AWS deployment help.
+5. Redis connection for Django.
+6. How to host Django websockets?
