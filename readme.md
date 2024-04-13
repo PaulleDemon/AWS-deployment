@@ -8,7 +8,20 @@ In this blog, I wish not only to help you deploy your Django project but also to
 
 While I'll be using Django, most of the steps followed will remain the same across different frameworks and programming languages.
 
->Note: If think some steps are missing or is incorrect please create a new issue on this Github repository or create a new pull request.
+>Note: If think some steps are missing or is incorrect please create a new issue on this GitHub repository or create a new pull request.
+
+> **Note:** Since the release of Amazon Linux 2023 (python 3.9 and above), amazon has removed some of the packages, you don't need those packages any longer. So can skip those in the configuration files. 
+
+<hr>
+
+## Help me deploy to AWS?
+Since many people have been asking me to help them in deployment, I have created it as a service, If you want me to help you deploy Django channels, Please Create a [discussion](https://github.com/PaulleDemon/AWS-deployment/discussions) or
+Send a message on the [Discord server](https://discord.gg/VtyfrAhD), I'll DM you there, (Standard charges apply)
+
+**Note**: 
+    For me to help you will have to provide me necessary permission through IAM access, if your company policy doesn't allow you to provide access, I have also created a video recording, you can check it out here: https://www.buymeacoffee.com/artpaul/e/241689
+
+<hr>
 
 ### Table of contents:
 
@@ -91,17 +104,6 @@ While I'll be using Django, most of the steps followed will remain the same acro
 
 <hr>
 
-### **Finding it hard to deploy your project or got stuck? Want me to deploy your project?**
-Check out my [services](https://www.buymeacoffee.com/artpaul/commissions)
-
-
-**Want community help in deployment** 
-
-Join our discord server
-
-[<img src="https://github.com/PaulleDemon/PaulleDemon/raw/main/images/discord-logo.png" height="160px" width="350px">](https://discord.gg/kbaJFz8n)
-
-
 References:
 1. https://docs.aws.amazon.com/
 2. StackOverflow answers
@@ -110,19 +112,13 @@ References:
 
 
 **Support open-source:**
-I'm a passionate supporter of open-source initiatives. Developing and maintaining open-source projects requires a significant commitment of time and effort. My goal is to transition to working on open-source projects on a full-time basis. If you'd like to support me and the open-source community, please consider making small donations so I can dedicate more time to open-source work.
+
+Like the article? consider a one-time donation
 
 [Donate](https://www.buymeacoffee.com/ArtPaul)
 
 [<img src="https://github.com/PaulleDemon/PaulleDemon/blob/main/images/buy-me-coffee.png" height="100px" width="350px">](https://www.buymeacoffee.com/ArtPaul)
 
-**Other ways to support**
-
-Try my production scale software products on [Gumroad](https://foxcraft.gumroad.com/)
-
-[<img src="https://github.com/PaulleDemon/PaulleDemon/blob/main/images/gumroad.png" height="150px" width="150px">](https://foxcraft.gumroad.com/)
-
-<hr>
 
 **Keywords**
 1. How to deploy Django to AWS?
@@ -130,4 +126,7 @@ Try my production scale software products on [Gumroad](https://foxcraft.gumroad.
 3. How to deploy Django to cloud?
 4. AWS deployment help.
 5. Redis connection for Django.
-6. How to host Django websockets?
+6. How to host Django WebSockets?
+7. AWS Deployment help
+8. Django AWS deployment help
+9. Django Channels AWS deployment help
