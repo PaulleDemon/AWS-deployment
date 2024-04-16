@@ -19,7 +19,7 @@ Since many people have been asking me to help them in deployment, I have created
 Send a message on the [Discord server](https://discord.gg/VtyfrAhD), I'll DM you there, (Standard charges apply)
 
 **Note**: 
-    For me to help you will have to provide me necessary permission through IAM access, if your company policy doesn't allow you to provide access, I have also created a video recording, you can check it out here: https://www.buymeacoffee.com/artpaul/e/241689
+    For me to help you will have to provide me necessary permission through IAM access, if your company policy doesn't allow you to provide access, I have also created a video recording, you can check it out [here](https://www.buymeacoffee.com/artpaul/e/241689)
 
 <hr>
 
